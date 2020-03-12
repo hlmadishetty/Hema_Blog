@@ -1,7 +1,5 @@
 @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
-@import url("/index.html");
-@import url("/about.html");
 
 * {
     margin: 0;
@@ -90,6 +88,7 @@ header button {
     font-size: 1rem;
     margin-bottom: .75rem;  
     color: white;
+    text-decoration: underline;    
 }
 
 /* Sidebar */
@@ -99,13 +98,7 @@ header button {
   background-color: #f9f9f9;
   color: black;
 }
-  /* Add some padding inside the card container */
-  .sidecon {
-    padding: 2px 16px;
-  }
-
-
-  
+    
 /* Footer */
 footer {
     grid-area: footer;
@@ -176,4 +169,17 @@ footer p {
             "sidebar main main"
             "footer footer footer ";
     }   
+} 
+
+/*small screen layout.. */
+@media (max-width: 600px) {
+  .container{         
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px, 200px;
+      grid-template-areas: 
+          "header header" 
+          "sidebar main"
+          "footer footer";
+  }   
 } 
